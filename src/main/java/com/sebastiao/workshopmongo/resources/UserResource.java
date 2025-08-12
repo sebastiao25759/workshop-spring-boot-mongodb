@@ -11,7 +11,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/users")
@@ -60,5 +59,4 @@ public class UserResource {
         User obj = service.findById(id);
         return ResponseEntity.ok().body(obj.getPosts());
     }
-
 }
